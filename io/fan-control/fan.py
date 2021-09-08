@@ -7,14 +7,14 @@ import time
 
 # Configuration
 FAN = 19 # pin used to drive PWM fan
-FREQ = 10000
+FREQ = 500
 
 h = lgpio.gpiochip_open(0)
 
 try:
     while True:
         # Turn the fan off
-        lgpio.tx_pwm(h, FAN, FREQ, 99)
+        lgpio.tx_pwm(h, FAN, FREQ, 39)
         time.sleep(1)
 
         # # Turn the fan to medium speed
